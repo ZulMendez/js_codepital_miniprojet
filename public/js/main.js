@@ -11,12 +11,17 @@ class Malades {
         this.poche = poche;
         this.etatSante = etatSante;
         this.traitement = traitement;
-        this.goTo = (patients) => {
+        this.goTo = () => {
             pharmacie.push(this.nom);
             console.log(`${this.nom} est allé à la pharmacie`);
         };
         this.takeCare = () => {
-
+            if (this.argent >= 100) {
+                console.log(`${this.nom} est soigné`);
+            } else {
+                cimetiere.push(this.nom);
+                console.log(`${this.nom} n'as pas assez d'argent pour le traitement.`);
+            }
         };
         this.paye = (doctor) => {
             this.argent -= doctor.tarif;
@@ -43,6 +48,7 @@ let salleAttente = {
 }
 console.log(salleAttente);
 console.log(`Dans la salle d'attente il y a ${salleAttente.patients.length} personnes`);
+
 // ## Description du doctor
 // >Le doctor lui reçoit les patients dans son cabinet. Tout d'abord il les diagnostiques puis se fait payer avant de préscrire un traitement. Attention le doctor fait à chaque fois sortir le patient de son cabinet avant de prendre le suivant. Dans son cabinet il y a son chat de race sphynx pour garder un environemment stérile. Son chat miaule toutes les deux secondes dans la console(bonus). La consultation coûte 50€. Les patients son dans un état de traitement avant de sortir du cabinet.
 let doctor = {
@@ -87,7 +93,7 @@ let traitement4 = new Pharmacie('Ventoline', 40);
 let traitement5 = new Pharmacie('F12+doc', 20);
 
 let pharmacie = [];
-let cimetière = [];
+let cimetiere = [];
 
 
 // ### Tarif des traitements
@@ -101,6 +107,8 @@ let cimetière = [];
 // ​
 // # Vérification
 // >Grâce à votre débugger suivé à la trace l'évolution de chacun de vos patients. Vérifier bien qu'il quitte à chaque fois la salle d'attente avant d'entrer dans le cabinet et qu'ils sortent bien du cabinet avant de laisser quelqu'un d'autre entré.
+
+// MARCUS
 doctor.patientIn(patient1);
 console.log(`${patient1.nom} est entré au cabinet`);
 console.log(doctor.cabinet);
@@ -126,4 +134,8 @@ console.log(doctor.cabinet);
 patient1.goTo(pharmacie);
 console.log(pharmacie);
 console.log(`le traitement de ${patient1.nom} coûte ${traitement1.prix} euros`);
+patient1.takeCare();
+console.log(`${patient1.nom} est mort`);
+console.log("__________________________________________________");
+
 
