@@ -157,3 +157,19 @@ console.log(`le traitement de ${patient2.nom} coûte ${traitement2.prix} euros`)
 patient2.takeCare()
 console.log("__________________________________________________");
 
+// SAN GOKU
+salleAttente.patients.splice(salleAttente.patients.indexOf(patient2), 1); console.log(`Dans la salle d'attente il y a ${salleAttente.patients.length} personnes`);
+console.log("__________________________________________________");
+console.log(`${patient3.nom} est entré au cabinet`);
+console.log(`${patient3.nom} est ${patient3.maladie}`);
+console.log(`le traitement de ${patient3.nom} est ${traitement3.traitement}`);
+patient3.paye(doctor)
+console.log(`${patient3.nom} a ${patient3.argent}€ actuellement`);
+doctor.patientOut(patient3)
+console.log(`${patient3.nom} a quitté le cabinet`);
+patient3.goTo()
+console.log(`le traitement de ${patient3.nom} coûte ${traitement3.prix} euros`);
+patient3.takeCare()
+console.log(`${patient3.nom} est mort`);
+console.log("__________________________________________________");
+
