@@ -187,6 +187,23 @@ console.log(`le traitement de ${patient4.nom} coûte ${traitement4.prix} euros`)
 patient4.takeCare()
 console.log("__________________________________________________");
 
+// SEMI COLON
+salleAttente.patients.splice(salleAttente.patients.indexOf(patient4), 1); console.log(`Dans la salle d'attente il y a ${salleAttente.patients.length} personnes`);
+console.log("__________________________________________________");
+console.log(`${patient5.nom} est entré au cabinet`);
+console.log(`${patient5.nom} est ${patient5.maladie}`);
+console.log(`le traitement de ${patient5.nom} est ${traitement5.traitement}`);
+patient2.paye(doctor)
+console.log(`${patient5.nom} a ${patient5.argent}€ actuellement`);
+doctor.patientOut(patient5)
+console.log(`${patient5.nom} a quitté le cabinet`);
+patient5.goTo()
+console.log(`le traitement de ${patient5.nom} coûte ${traitement5.prix} euros`);
+patient5.takeCare()
+console.log(`${patient5.nom} est mort`);
+console.log("__________________________________________________");
+salleAttente.patients.splice(salleAttente.patients.indexOf(patient5), 1); console.log(`Dans la salle d'attente il y a ${salleAttente.patients.length} personnes`);
+console.log("__________________________________________________");
 
 
 
