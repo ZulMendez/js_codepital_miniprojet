@@ -138,4 +138,22 @@ patient1.takeCare();
 console.log(`${patient1.nom} est mort`);
 console.log("__________________________________________________");
 
+// OPTIMUS 
+salleAttente.patients.splice(salleAttente.patients.indexOf(patient1), 1);
+console.log(`Dans la salle d'attente il y a ${salleAttente.patients.length} personnes`);
+console.log("__________________________________________________");
+// doctor.diagnostique(patient2)
+console.log(`${patient2.nom} est entré au cabinet`);
+console.log(`${patient2.nom} est ${patient2.maladie}`);
+console.log(`le traitement de ${patient2.nom} est ${traitement2.traitement}`);
+patient2.paye(doctor)
+console.log(`${patient2.nom} a ${patient2.argent}€ actuellement`);
+// console.log(patient1.argent);
+// console.log(doctor.tarif);
+doctor.patientOut(patient2)
+console.log(`${patient2.nom} a quitté le cabinet`);
+patient2.goTo()
+console.log(`le traitement de ${patient2.nom} coûte ${traitement2.prix} euros`);
+patient2.takeCare()
+console.log("__________________________________________________");
 
