@@ -172,4 +172,21 @@ console.log(`le traitement de ${patient3.nom} coûte ${traitement3.prix} euros`)
 patient3.takeCare()
 console.log(`${patient3.nom} est mort`);
 console.log("__________________________________________________");
+// DARTH VADER
+salleAttente.patients.splice(salleAttente.patients.indexOf(patient3), 1); console.log(`Dans la salle d'attente il y a ${salleAttente.patients.length} personnes`);
+console.log("__________________________________________________");
+console.log(`${patient4.nom} est entré au cabinet`);
+console.log(`${patient4.nom} est ${patient4.maladie}`);
+console.log(`le traitement de ${patient4.nom} est ${traitement4.traitement}`);
+patient2.paye(doctor)
+console.log(`${patient4.nom} a ${patient4.argent}€ actuellement`);
+doctor.patientOut(patient4)
+console.log(`${patient4.nom} a quitté le cabinet`);
+patient4.goTo()
+console.log(`le traitement de ${patient4.nom} coûte ${traitement4.prix} euros`);
+patient4.takeCare()
+console.log("__________________________________________________");
+
+
+
 
